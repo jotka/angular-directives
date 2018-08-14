@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p appBasicHighlight>appBasicHighlight Directive</p>
+            <p appBestHighlight>appBestHighlight Directive</p>
+            <p appEvenBetterHighlight>appEvenBetterHighlight Directive</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button (click)="doShowWarning()">Show/hide warning</button>
+            <div *ngIf="showWarning" style="background-color: red;">WARNING!</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p *appMyIf="true">
+                This paragraph is displayed
+            </p>
+            <p *appMyIf="false">
+                This paragraph is removed from the DOM.
+            </p>
+        </div>
+    </div>
+</div>
